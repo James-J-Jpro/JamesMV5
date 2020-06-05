@@ -15,11 +15,17 @@ namespace JamesScioMVC5
             routes.MapMvcAttributeRoutes();
 
             routes.MapRoute(
+                "Custom",
+                "myc/{data1}",
+                new { controller = "User", action = "Index", data1 = "nnn", data2 = "n22", data3 = "54" });
+
+            routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
 
+            
             //routes.MapRoute(
             //    name: "Sample1",
             //    url: "{controller}/{action}/{name2}/{val}"                

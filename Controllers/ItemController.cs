@@ -1,4 +1,6 @@
-﻿using System;
+﻿using JamesScioMVC5.ActionFilters;
+using JamesScioMVC5.HelperUtils;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -12,6 +14,19 @@ namespace JamesScioMVC5.Controllers
         public ActionResult Index()
         {
             return View();
+        }
+
+        [AllowJsonGetAttribute]
+        [AcceptVerbs(new[] { "POST" })]
+        //[HttpPost]
+        public JsonResult AVEPTest()
+        {
+            var result = new ResultStatus
+            {
+                StatusCode = 200,
+                ResultMessage = "AVEPTest"
+            };
+            return Json(result);
         }
 
         // GET: Item/Details/5

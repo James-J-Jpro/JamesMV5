@@ -10,8 +10,9 @@ namespace JamesScioMVC5.Controllers
     [LogActionFilter]
     public class HomeController : Controller
     {
-        public ActionResult Index()
+        public ActionResult Index(/*string dataFromUC*/)
         {
+            var dataReceived = RouteData.Values;
             return View();
         }
 

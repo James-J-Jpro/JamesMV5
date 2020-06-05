@@ -13,8 +13,11 @@ namespace JamesScioMVC5.Controllers
         // GET: User
         public ActionResult Index()
         {
+            var data = RouteData.Values;
+            var countOfRouteDataValuesPassed = data.Count;
             var user = new UserViewModel { ID = 111, Name = "MyTestName111" };
-            return View(user);
+            //return View(user);
+            return RedirectToAction("Index", "Home", new { /*dataFromUC = data*/ });
         }
 
         [HttpGet]
