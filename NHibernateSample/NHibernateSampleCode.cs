@@ -21,7 +21,7 @@ namespace JamesScioMVC5.NHibernateSample
              */
 
             /*
-            string DataSource = "DESKTOP-8OLF75L";
+            string DataSource = "MyDataSource";
             string InitialCatalog = "JamesScio_DB";
             string IntegratedSecurity = "True";
             string ConnectTimeout = "30";
@@ -33,7 +33,7 @@ namespace JamesScioMVC5.NHibernateSample
 
             cfg.DataBaseIntegration(x =>
                 {
-                    x.ConnectionString = "Data Source=DESKTOP-8OLF75L;Initial Catalog = JamesScio_DB;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+                    x.ConnectionString = "Data Source=MyDataSource;Initial Catalog = JamesScio_DB;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
                     x.Driver<SqlClientDriver>();
                     x.Dialect<MsSql2012Dialect>();
                 });
